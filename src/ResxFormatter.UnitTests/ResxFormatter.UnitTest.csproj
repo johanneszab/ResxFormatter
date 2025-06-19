@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>ResxFormatter.UnitTests</RootNamespace>
+    <Copyright>Copyright © johanneszab 2024</Copyright>
+    <Configurations>Debug;Release</Configurations>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\bin\Debug</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\bin\Release</OutputPath>
+  </PropertyGroup>
+<ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+  </ItemGroup>
+<ItemGroup>
+  <Folder Include="Properties\" />
+</ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\ResxFormatter\ResxFormatter.csproj" />
+</ItemGroup>
+<ItemGroup>
+  <EmbeddedResource Update="TestData\sorted.resx">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </EmbeddedResource>
+  <EmbeddedResource Update="TestData\unsorted.resx">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </EmbeddedResource>
+</ItemGroup>
+</Project>

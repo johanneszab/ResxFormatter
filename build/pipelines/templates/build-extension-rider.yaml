@@ -1,0 +1,83 @@
+jobs:
+- job: BuildRiderExtension
+
+  displayName: 'Build Rider Plugin'
+
+  pool:
+    vmImage: 'windows-latest'
+
+  variables:
+    pluginVersion: $(Build.BuildNumber)
+
+  continueOnError: true
+
+  steps:
+  - task: PowerShell@2
+    displayName: 'Check for Rider project changes'
+    name: RiderProjectChanges
+    condition: eq(variables['checkRiderChanges'], true)
+    inputs:
+      targetType: 'inline'
+      pwsh: true
+      script: |
+        $folderPath = '**/ResxFormatter.Extension.Rider/*'
+
+        # For debugging pipeline
+        #$folderPath = '**/pipelines/*'
+        #git show-ref
+        
+        $changedFiles = git diff refs/remotes/origin/master --name-only -- $folderPath
+
+        if ($changedFiles.Count -gt 0) {
+          Write-Host "Changes detected in Rider project:"
+          $changedFiles | ForEach-Object { Write-Host $_ }
+          # Set a variable to indicate changes
+          Write-Host "##vso[task.setvariable variable=ChangesDetected]true"
+        } else {
+          Write-Host "No changes detected in Rider project"
+          # Set a variable to indicate no changes
+          Write-Host "##vso[task.setvariable variable=ChangesDetected]false"
+        }
+  
+  - task: NuGetToolInstaller@1
+    displayName: 'Install NuGet Tools'
+    condition: or(eq(variables['checkRiderChanges'], false), eq(variables['ChangesDetected'], true))
+
+  - task: NuGetCommand@2
+    displayName: 'NuGet Restore'
+    condition: or(eq(variables['checkRiderChanges'], false), eq(variables['ChangesDetected'], true))
+    inputs:
+      command: custom
+      arguments: restore src/ResxFormatter.Rider.sln -Verbosity Detailed -NonInteractive
+
+  - task: Gradle@2
+    displayName: Build
+    condition: or(eq(variables['checkRiderChanges'], false), eq(variables['ChangesDetected'], true))
+    inputs:
+      workingDirectory: '$(Pipeline.Workspace)\s\src\ResxFormatter.Extension.Rider'
+      gradleWrapperFile: '$(Pipeline.Workspace)\s\src\ResxFormatter.Extension.Rider\gradlew.bat'
+      gradleOptions: '-Xmx3072m'
+      options: '-PPluginVersion=$(pluginVersion)'
+      javaHomeOption: 'JDKVersion'
+      jdkVersionOption: '1.21'
+      jdkArchitectureOption: 'x64'
+      publishJUnitResults: true
+      testResultsFiles: '**/TEST-*.xml'
+      tasks: 'buildPlugin'
+
+  - task: CopyFiles@2
+    displayName: Copy Artifacts to Staging
+    condition: or(eq(variables['checkRiderChanges'], false), eq(variables['ChangesDetected'], true))
+    inputs:
+      contents: '$(Pipeline.Workspace)\s\src\ResxFormatter.Extension.Rider\output\**\*.zip'
+      targetFolder: $(Build.ArtifactStagingDirectory)
+      cleanTargetFolder: true
+      overWrite: true
+      flattenFolders: true
+
+  - task: PublishBuildArtifacts@1
+    displayName: Publish artifacts
+    condition: or(eq(variables['checkRiderChanges'], false), eq(variables['ChangesDetected'], true))
+    inputs:
+      pathToPublish: $(Build.ArtifactStagingDirectory)
+      artifactName: 'ResxFormatter.Extension.Rider'

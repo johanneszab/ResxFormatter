@@ -1,0 +1,16 @@
+trigger:
+- master
+
+pr: none
+
+variables:
+  buildConfiguration: 'Release'
+  major: 1
+  patch: $[counter(format('{0:yyyyMMdd}', pipeline.startTime), 0)]
+  checkRiderChanges: false
+
+name: $(major).$(Date:yyyyMMdd).$(patch).0
+
+jobs:
+- template: ./templates/run-tests-public.yaml
+- template: ./templates/build-extension-rider-public.yaml
