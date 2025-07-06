@@ -23,9 +23,6 @@ object ResxFormatterModel : Ext(SolutionModel.Solution) {
     }
 
     init {
-        //setting(CSharp50Generator.Namespace, "ReSharperPlugin.ResxFormatter.dotUltimate.Rider.Model")
-        //setting(Kotlin11Generator.Namespace, "plugins.resxformatter.dotultimate.model")
-
         call("performReformat", RdResxFormatterFormattingRequest, RdResxFormatterFormattingResult).async
     }
 }

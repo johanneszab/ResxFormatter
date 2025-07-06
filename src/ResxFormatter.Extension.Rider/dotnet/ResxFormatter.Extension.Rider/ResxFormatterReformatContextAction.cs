@@ -10,6 +10,7 @@ using JetBrains.ProjectModel.DataContext;
 using JetBrains.ReSharper.Feature.Services.Bulbs;
 using JetBrains.ReSharper.Feature.Services.ContextActions;
 using JetBrains.ReSharper.Feature.Services.Intentions;
+using JetBrains.ReSharper.Intentions.Xml.ContextActions;
 using JetBrains.ReSharper.Psi;
 using JetBrains.ReSharper.Psi.Files;
 using JetBrains.ReSharper.Psi.Resx;
@@ -22,7 +23,7 @@ namespace ResxFormatter.Extension.Rider
     [ContextAction(
         Name = "ResxFormatter.Reformat",
         Description = "Formats the document(s) using Resx Formatter.",
-        Group = CommonContextActions.GroupID,
+        GroupType = typeof(XmlContextActions),
         Disabled = false,
         Priority = -10)]
     public class ResxFormatterReformatContextAction : ContextActionBase
