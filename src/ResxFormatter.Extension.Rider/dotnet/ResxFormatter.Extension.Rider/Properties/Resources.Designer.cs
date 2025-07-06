@@ -96,11 +96,48 @@ namespace ResxFormatter.Extension.Rider.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Import Visual Studio ResxFormatter Settings.
+        /// </summary>
+        internal static string ImportResxFormatterEditorConfig {
+            get {
+                return ResourceManager.GetString("ImportResxFormatterEditorConfig", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Read ResxFormatter settings from .editorconfig, if available.
+        ///Overwrites all other settings..
+        /// </summary>
+        internal static string ImportResxFormatterEditorConfigToolTip {
+            get {
+                return ResourceManager.GetString("ImportResxFormatterEditorConfigToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Key order:.
         /// </summary>
         internal static string KeyOrder {
             get {
                 return ResourceManager.GetString("KeyOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove documentation comment from resx file.
+        /// </summary>
+        internal static string RemoveDocumentationComment {
+            get {
+                return ResourceManager.GetString("RemoveDocumentationComment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove XSD schema from resx file.
+        /// </summary>
+        internal static string RemoveXsdSchema {
+            get {
+                return ResourceManager.GetString("RemoveXsdSchema", resourceCulture);
             }
         }
         

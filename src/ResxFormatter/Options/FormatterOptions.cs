@@ -39,25 +39,47 @@ namespace ResxFormatter.Options
         [SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "Required for deserialization")]
         public FormatterOptions(bool isJsonConstructor = true) { }
         
-        // Configuration
+        // General
+        [Category("General")]
+        [DisplayName("Import Visual Studio ResxFormatter Settings")]
+        [JsonProperty(nameof(ImportResxFormatterEditorConfig), DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
+        [Description("Read ResxFormatter settings from .editorconfig, if available.\r\nOverwrites all other settings.")]
+        [DefaultValue(true)]
+        public bool ImportResxFormatterEditorConfig { get; set; }
+        
         [Category("General")]
         [DisplayName("Sort resx on save")]
         [JsonProperty(nameof(FormatOnSave), DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
-        [Description("Defines whether to automatically format the active resx file while saving.\r\n\r\nDefault Value: true")]
+        [Description("Defines whether to automatically format the active resx file while saving.")]
         [DefaultValue(true)]
         public bool FormatOnSave { get; set; }
         
         [Category("General")]
         [DisplayName("When saving a resx file, sort the XML data nodes by the key using the following sort order")]
         [JsonProperty(nameof(SortOrder), DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
-        [Description("Define the sort order of the XML data nodes when saving a resx file.\r\n\r\nDefault Value: OrdinalIgnoreCase")]
+        [Description("Define the sort order of the XML data nodes when saving a resx file.")]
         [DefaultValue(StringComparison.OrdinalIgnoreCase)]
         public StringComparison SortOrder { get; set; }
         
+        [Category("General")]
+        [DisplayName("Remove XSD schema from resx file")]
+        [JsonProperty(nameof(RemoveXsdSchema), DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
+        [Description("Remove the XSD schema from the resx file.")]
+        [DefaultValue(false)]
+        public bool RemoveXsdSchema { get; set; }
+        
+        [Category("General")]
+        [DisplayName("Remove documentation comment from resx file.")]
+        [JsonProperty(nameof(RemoveDocumentationComment), DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
+        [Description("Remove the documentation comment from the resx file.")]
+        [DefaultValue(false)]
+        public bool RemoveDocumentationComment { get; set; }
+        
+        // Configuration
         [Category("Configuration")]
         [RefreshProperties(RefreshProperties.All)]
         [DisplayName("Search to drives root")]
-        [Description("When set to true, Resx Formatter will look for an external Resx Formatter configuration file not only up through your solution directory, but up through the drives root of the current solution so you can share one configuration file through multiple solutions.\r\n\r\nDefault Value: false")]
+        [Description("When set to true, Resx Formatter will look for an external Resx Formatter configuration file not only up through your solution directory, but up through the drives root of the current solution so you can share one configuration file through multiple solutions.")]
         [DefaultValue(false)]
         [JsonIgnore]
         public bool SearchToDriveRoot { get; set; }
@@ -66,7 +88,7 @@ namespace ResxFormatter.Options
         [Category("Configuration")]
         [RefreshProperties(RefreshProperties.All)]
         [DisplayName("External configuration file")]
-        [Description("Defines location of external Resx Formatter configuration file. Specifying an external configuration file allows you to easily point multiple instances to a shared configuration. The configuration path can be local or network-based. Invalid configurations will be ignored.\r\n\r\nDefault Value: N/A")]
+        [Description("Defines location of external Resx Formatter configuration file. Specifying an external configuration file allows you to easily point multiple instances to a shared configuration. The configuration path can be local or network-based. Invalid configurations will be ignored.")]
         [DefaultValue("")]
         [JsonIgnore]
         public string ConfigPath
@@ -86,7 +108,7 @@ namespace ResxFormatter.Options
         [Category("Configuration")]
         [RefreshProperties(RefreshProperties.All)]
         [DisplayName("Reset to default")]
-        [Description("When set to true, all Resx Formatter settings will be reset to their defaults.\r\n\r\nDefault Value: false")]
+        [Description("When set to true, all Resx Formatter settings will be reset to their defaults.")]
         [DefaultValue(false)]
         [JsonIgnore]
         public bool ResetToDefault

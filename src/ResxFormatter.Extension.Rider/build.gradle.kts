@@ -134,7 +134,8 @@ tasks {
                 "$outputFolder/${DotnetPluginId}.dll",
                 "$outputFolder/${DotnetPluginId}.pdb",
                 "$outputFolder/ResxFormatter.dll",
-                "$outputFolder/ResxFormatter.pdb"
+                "$outputFolder/ResxFormatter.pdb",
+                "$outputFolder/EditorConfig.Core.dll"
         )
 
         dllFiles.forEach({ f ->

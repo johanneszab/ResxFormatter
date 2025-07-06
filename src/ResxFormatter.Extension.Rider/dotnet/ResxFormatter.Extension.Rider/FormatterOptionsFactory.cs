@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using JetBrains.Application.Settings;
 using JetBrains.ProjectModel;
@@ -10,6 +11,17 @@ namespace ResxFormatter.Extension.Rider
 {
     public static class FormatterOptionsFactory
     {
+        private static readonly Dictionary<StringComparer, StringComparison> ComparerToComparison = 
+            new()
+            {
+                [StringComparer.CurrentCulture] = StringComparison.CurrentCulture,
+                [StringComparer.CurrentCultureIgnoreCase] = StringComparison.CurrentCultureIgnoreCase,
+                [StringComparer.InvariantCulture] = StringComparison.InvariantCulture,
+                [StringComparer.InvariantCultureIgnoreCase] = StringComparison.InvariantCultureIgnoreCase,
+                [StringComparer.Ordinal] = StringComparison.Ordinal,
+                [StringComparer.OrdinalIgnoreCase] = StringComparison.OrdinalIgnoreCase
+            };
+        
         public static IFormatterOptions FromSettings(
             IContextBoundSettingsStoreLive settings,
             ISolution? solution,
@@ -36,8 +48,11 @@ namespace ResxFormatter.Extension.Rider
             // Load global settings
             IFormatterOptions formatterOptions = new FormatterOptions();
             
+            formatterOptions.ImportResxFormatterEditorConfig = settings.GetValue((ResxFormatterSettings s) => s.ImportResxFormatterEditorConfig);
             formatterOptions.FormatOnSave = settings.GetValue((ResxFormatterSettings s) => s.FormatOnSave);
             formatterOptions.SortOrder = settings.GetValue((ResxFormatterSettings s) => s.SortOrder);
+            formatterOptions.RemoveXsdSchema = settings.GetValue((ResxFormatterSettings s) => s.RemoveXsdSchema);
+            formatterOptions.RemoveDocumentationComment = settings.GetValue((ResxFormatterSettings s) => s.RemoveDocumentationComment);
             formatterOptions.ConfigPath = settings.GetValue((ResxFormatterSettings s) => s.ConfigPath)?.FullPath;
             formatterOptions.SearchToDriveRoot = settings.GetValue((ResxFormatterSettings s) => s.SearchToDriveRoot);
             
@@ -62,6 +77,15 @@ namespace ResxFormatter.Extension.Rider
                 }
             }
 
+            // Try finding ResxFormatter settings in .editorconfig.
+            var editorConfig = new ResxEditorConfigSettings(sourceFilePath);
+            if (editorConfig.IsActive)
+            {
+                formatterOptions.SortOrder = ComparerToComparison[editorConfig.Comparer];
+                formatterOptions.RemoveXsdSchema = editorConfig.RemoveXsdSchema;
+                formatterOptions.RemoveDocumentationComment = editorConfig.RemoveDocumentationComment;
+            }
+            
             return formatterOptions;
         }
         

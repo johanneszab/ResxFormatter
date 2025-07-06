@@ -7,6 +7,8 @@ namespace ResxFormatter.Options
     /// </summary>
     public interface IFormatterOptions
     {
+        bool ImportResxFormatterEditorConfig { get; set;  }
+        
         bool FormatOnSave { get; set; }
         
         StringComparison SortOrder { get; set; }
@@ -14,5 +16,9 @@ namespace ResxFormatter.Options
         string ConfigPath { get; set; }
 
         bool SearchToDriveRoot { get; set; }
+        
+        bool RemoveXsdSchema { get; set; }
+        
+        bool RemoveDocumentationComment { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using System.Xml;
 using System.Xml.Linq;
 using ResxFormatter.Options;
 
@@ -34,8 +35,28 @@ namespace ResxFormatter
         private bool Sort(XElement root, StringComparison stringComparison)
         {
             var comparer = new DelegateComparer<string>((left, right) => string.Compare(left, right, stringComparison));
-            
+            bool schemaRemoved = false;
             var defaultNamespace = root.GetDefaultNamespace();
+            
+            if (options.RemoveXsdSchema || options.RemoveDocumentationComment)
+            {
+                foreach (var node in root.Nodes())
+                {
+                    if (options.RemoveXsdSchema && node is XElement { Name.LocalName: "schema" })
+                    {
+                        node.Remove();
+                        schemaRemoved = true;
+                        continue;
+                    }
+                    
+                    if (options.RemoveDocumentationComment && node.NodeType == XmlNodeType.Comment)
+                    {
+                        node.Remove();
+                        schemaRemoved = true;
+                    }
+                }
+            }
+            
             var dataNodeName = defaultNamespace.GetName(@"data");
 
             var nodes = root
@@ -46,8 +67,9 @@ namespace ResxFormatter
                 .OrderBy(GetName, comparer)
                 .ToArray();
 
-            return SortNodes(root, nodes, sortedNodes);
-            
+            var nodesSorted = SortNodes(root, nodes, sortedNodes);
+            return schemaRemoved || nodesSorted;
+
             static string GetName(XElement node)
             {
                 return node.Attribute(NameAttributeName)?.Value.TrimStart('>') ?? string.Empty;

@@ -32,8 +32,11 @@ namespace ResxFormatter.Extension.Rider.Options
             _iconHost = iconHost;
             
             AddHeader(Properties.Resources.General);
+            AddBoolOption((ResxFormatterSettings x) => x.ImportResxFormatterEditorConfig, Properties.Resources.ImportResxFormatterEditorConfig, Properties.Resources.ImportResxFormatterEditorConfigToolTip);
             AddBoolOption((ResxFormatterSettings x) => x.FormatOnSave, Properties.Resources.SortResxOnSave, Properties.Resources.SortResxOnSaveToolTip);
             AddComboEnum((ResxFormatterSettings x) => x.SortOrder, Properties.Resources.KeyOrder);
+            AddBoolOption((ResxFormatterSettings x) => x.RemoveXsdSchema, Properties.Resources.RemoveXsdSchema);
+            AddBoolOption((ResxFormatterSettings x) => x.RemoveDocumentationComment, Properties.Resources.RemoveDocumentationComment);
             
             AddHeader(Properties.Resources.Configuration);
             AddText(Properties.Resources.ExternalConfigurationFile);
