@@ -3,6 +3,8 @@ Resx Formatter is an extension that allows to define the sort order of the XML d
 Therefore, this extension can help you/your team to mitigate merge conflicts by sorting the resx keys in a particular,
 well-defined order.
 
+Additionally, its possible to remove the XSD schema or the document comment during the sort to save space.
+
 # Installation
 You can use the [latest resxformatter.rider.x.y.z.zip](https://github.com/johanneszab/ResxFormatter/releases) from the 
 release page and install via `Settings -> Plugins -> Plugin Settings Wheel -> Install Plugin from Disk...` as shown below:
@@ -14,6 +16,8 @@ There are currently two modes available:
 
 1. format resx file when saved
 2. format resx file via context action
+
+Alternatively, you can import [Stefan Eglis ResXFormatter](https://github.com/stefanegli/ResxFormatter) settings from the .editorconfig.
 
 ## Format when saved
 Per default, ResxFormatter sorts the XML data nodes of the resource file by StringComparison.OrdinalIgnoreCase. However,
