@@ -22,7 +22,7 @@ namespace ResxFormatter.Extension.Rider
 {
     [ContextAction(
         Name = "ResxFormatter.Reformat",
-        Description = "Formats the document(s) using Resx Formatter.",
+        Description = "Sorts the document(s) using Resx Formatter.",
         GroupType = typeof(XmlContextActions),
         Disabled = false,
         Priority = -10)]
@@ -33,7 +33,7 @@ namespace ResxFormatter.Extension.Rider
         private readonly ActionAppliesTo _actionAppliesTo;
 
         public ResxFormatterReformatContextAction([NotNull] ResxContextActionDataProvider dataProvider)
-            : this(dataProvider, "Format with Resx Formatter", ActionAppliesTo.File)
+            : this(dataProvider, Properties.Resources.SortWithResxFormatter, ActionAppliesTo.File)
         {
         }
         
@@ -54,7 +54,7 @@ namespace ResxFormatter.Extension.Rider
         public override IEnumerable<IntentionAction> CreateBulbItems()
         {
             var mainAnchor = new SubmenuAnchor(IntentionsAnchors.ContextActionsAnchor, 
-                new SubmenuBehavior(text: "Format with Resx Formatter", icon: null, executable: true, removeFirst: true));
+                new SubmenuBehavior(text: Properties.Resources.SortWithResxFormatter, icon: null, executable: true, removeFirst: true));
             var subAnchor2 = new InvisibleAnchor(mainAnchor);
             var subAnchor3 = subAnchor2.CreateNext(separate: true);
 
@@ -67,9 +67,9 @@ namespace ResxFormatter.Extension.Rider
             return
             [
                 Create(_text, _actionAppliesTo, subAnchor3),
-                Create("Format Resx file", ActionAppliesTo.File, subAnchor3),
-                Create("Format Resx files in project", ActionAppliesTo.Project, subAnchor3),
-                Create("Format Resx files in solution", ActionAppliesTo.Solution, subAnchor3)
+                Create(Properties.Resources.SortResxFile, ActionAppliesTo.File, subAnchor3),
+                Create(Properties.Resources.SortResxFilesInProject, ActionAppliesTo.Project, subAnchor3),
+                Create(Properties.Resources.SortResxFilesInSolution, ActionAppliesTo.Solution, subAnchor3)
             ];
         } 
 

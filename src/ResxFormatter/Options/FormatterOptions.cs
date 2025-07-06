@@ -40,21 +40,21 @@ namespace ResxFormatter.Options
         public FormatterOptions(bool isJsonConstructor = true) { }
         
         // Configuration
-        [Category("Resx Formatter Configuration")]
-        [DisplayName("Format resx file on save")]
-        [JsonProperty("FormatOnSave", DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
+        [Category("General")]
+        [DisplayName("Sort resx on save")]
+        [JsonProperty(nameof(FormatOnSave), DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
         [Description("Defines whether to automatically format the active resx file while saving.\r\n\r\nDefault Value: true")]
         [DefaultValue(true)]
         public bool FormatOnSave { get; set; }
         
-        [Category("Resx Formatter Configuration")]
+        [Category("General")]
         [DisplayName("When saving a resx file, sort the XML data nodes by the key using the following sort order")]
-        [JsonProperty("SortOrder", DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
+        [JsonProperty(nameof(SortOrder), DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
         [Description("Define the sort order of the XML data nodes when saving a resx file.\r\n\r\nDefault Value: OrdinalIgnoreCase")]
         [DefaultValue(StringComparison.OrdinalIgnoreCase)]
         public StringComparison SortOrder { get; set; }
         
-        [Category("Resx Formatter Configuration")]
+        [Category("Configuration")]
         [RefreshProperties(RefreshProperties.All)]
         [DisplayName("Search to drives root")]
         [Description("When set to true, Resx Formatter will look for an external Resx Formatter configuration file not only up through your solution directory, but up through the drives root of the current solution so you can share one configuration file through multiple solutions.\r\n\r\nDefault Value: false")]
@@ -63,7 +63,7 @@ namespace ResxFormatter.Options
         public bool SearchToDriveRoot { get; set; }
 
         private string configPath = string.Empty;
-        [Category("Resx Formatter Configuration")]
+        [Category("Configuration")]
         [RefreshProperties(RefreshProperties.All)]
         [DisplayName("External configuration file")]
         [Description("Defines location of external Resx Formatter configuration file. Specifying an external configuration file allows you to easily point multiple instances to a shared configuration. The configuration path can be local or network-based. Invalid configurations will be ignored.\r\n\r\nDefault Value: N/A")]
@@ -83,7 +83,7 @@ namespace ResxFormatter.Options
         }
         
         private bool resetToDefault;
-        [Category("Resx Formatter Configuration")]
+        [Category("Configuration")]
         [RefreshProperties(RefreshProperties.All)]
         [DisplayName("Reset to default")]
         [Description("When set to true, all Resx Formatter settings will be reset to their defaults.\r\n\r\nDefault Value: false")]

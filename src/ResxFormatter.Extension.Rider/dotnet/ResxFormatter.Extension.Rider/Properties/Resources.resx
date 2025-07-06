@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true"></xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="ExternalConfigurationFile" xml:space="preserve">
+    <value>External configuration file:</value>
+  </data>
+  <data name="SortResxFile" xml:space="preserve">
+    <value>Sort Resx file</value>
+  </data>
+  <data name="SortResxFilesInProject" xml:space="preserve">
+    <value>Sort Resx files in project</value>
+  </data>
+  <data name="SortResxFilesInSolution" xml:space="preserve">
+    <value>Sort Resx files in solution</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="KeyOrder" xml:space="preserve">
+    <value>Key order:</value>
+  </data>
+  <data name="SearchToDriveRoot" xml:space="preserve">
+    <value>Search to drive root</value>
+  </data>
+  <data name="SortResxOnSave" xml:space="preserve">
+        <value>Sort resx on save</value>
+    </data>
+  <data name="SortWithResxFormatter" xml:space="preserve">
+    <value>Sort with Resx Formatter</value>
+  </data>
+  <data name="SortResxOnSaveToolTip" xml:space="preserve">
+    <value>Defines whether to automatically format the active resx file while saving.</value>
+  </data>
+  <data name="SearchToDriveRootToolTip" xml:space="preserve">
+    <value>When set to true, Resx Formatter will look for an external Resx Formatter configuration file not only up through your solution directory, but up through the drives root of the current solution so you can share one configuration file through multiple solutions.</value>
+  </data>
+  <data name="ExternalConfigurationFileToolTip" xml:space="preserve">
+    <value>Defines location of external Resx Formatter configuration file. Specifying an external configuration file allows you to easily point multiple instances to a shared configuration. The configuration path can be local or network-based. Invalid configurations will be ignored.</value>
+  </data>
+</root>

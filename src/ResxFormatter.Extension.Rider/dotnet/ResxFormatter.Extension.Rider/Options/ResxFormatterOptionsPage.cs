@@ -31,16 +31,16 @@ namespace ResxFormatter.Extension.Rider.Options
         {
             _iconHost = iconHost;
             
-            AddHeader("General");
-            AddBoolOption((ResxFormatterSettings x) => x.FormatOnSave, "Sort resx on save");
-            AddComboEnum((ResxFormatterSettings x) => x.SortOrder, "Key order:");
+            AddHeader(Properties.Resources.General);
+            AddBoolOption((ResxFormatterSettings x) => x.FormatOnSave, Properties.Resources.SortResxOnSave, Properties.Resources.SortResxOnSaveToolTip);
+            AddComboEnum((ResxFormatterSettings x) => x.SortOrder, Properties.Resources.KeyOrder);
             
-            AddHeader("Configuration");
-            AddText("External configuration file:");
+            AddHeader(Properties.Resources.Configuration);
+            AddText(Properties.Resources.ExternalConfigurationFile);
             var configPath = new Property<FileSystemPath>("ResxFormatterOptionsPage::configPath");
             OptionsSettingsSmartContext.SetBinding(lifetime, (ResxFormatterSettings k) => k.ConfigPath, configPath);
-            AddFileChooserOption(configPath, "External configuration file", FileSystemPath.Empty, null, commonFileDialogs, null, false, "", null, null, null, null);
-            AddBoolOption((ResxFormatterSettings x) => x.SearchToDriveRoot, "Search to drive root");
+            AddFileChooserOption(configPath, Properties.Resources.ExternalConfigurationFileToolTip, FileSystemPath.Empty, null, commonFileDialogs, null, false, "", null, null, null, null);
+            AddBoolOption((ResxFormatterSettings x) => x.SearchToDriveRoot, Properties.Resources.SearchToDriveRoot, Properties.Resources.SearchToDriveRootToolTip);
         }
     }
 }
