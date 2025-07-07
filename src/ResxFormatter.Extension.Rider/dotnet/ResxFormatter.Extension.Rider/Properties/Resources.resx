@@ -55,7 +55,7 @@
     <value>Defines location of external Resx Formatter configuration file. Specifying an external configuration file allows you to easily point multiple instances to a shared configuration. The configuration path can be local or network-based. Invalid configurations will be ignored.</value>
   </data>
     <data name="ImportResxFormatterEditorConfig" xml:space="preserve">
-        <value>Import Visual Studio ResxFormatter Settings</value>
+        <value>Import Visual Studio ResxFormatter settings</value>
     </data>
     <data name="RemoveXsdSchema" xml:space="preserve">
         <value>Remove XSD schema from resx file</value>
@@ -66,5 +66,8 @@
     <data name="ImportResxFormatterEditorConfigToolTip" xml:space="preserve">
         <value>Read ResxFormatter settings from .editorconfig, if available.
 Overwrites all other settings.</value>
+    </data>
+    <data name="Settings" xml:space="preserve">
+        <value>Settings</value>
     </data>
 </root>

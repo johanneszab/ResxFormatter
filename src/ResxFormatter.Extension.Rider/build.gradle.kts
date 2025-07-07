@@ -135,6 +135,7 @@ tasks {
                 "$outputFolder/${DotnetPluginId}.pdb",
                 "$outputFolder/ResxFormatter.dll",
                 "$outputFolder/ResxFormatter.pdb",
+                "$outputFolder/System.Runtime.Caching.dll",
                 "$outputFolder/EditorConfig.Core.dll"
         )
 

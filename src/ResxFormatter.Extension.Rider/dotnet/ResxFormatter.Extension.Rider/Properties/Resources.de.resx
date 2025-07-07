@@ -57,4 +57,7 @@
         <value>Liest die ResxFormatter settings aus der .editorconfig, falls vorhanden
 Überschreibt alle übrigen Einstellungen.</value>
     </data>
+    <data name="Settings" xml:space="preserve">
+        <value>Einstellungen</value>
+    </data>
 </root>

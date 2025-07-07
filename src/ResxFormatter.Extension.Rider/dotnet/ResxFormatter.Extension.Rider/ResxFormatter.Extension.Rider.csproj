@@ -20,6 +20,7 @@
         <PackageReference Include="JetBrains.Rider.SDK" Version="$(SdkVersion)" />
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
         <PackageReference Include="System.Diagnostics.TraceSource" Version="4.3.0" />
+        <PackageReference Include="System.Runtime.Caching" Version="9.0.6" />
     </ItemGroup>
 
     <ItemGroup>

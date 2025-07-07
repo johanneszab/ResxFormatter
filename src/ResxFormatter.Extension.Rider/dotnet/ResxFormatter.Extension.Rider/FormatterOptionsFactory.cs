@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Caching;
 using JetBrains.Application.Settings;
 using JetBrains.ProjectModel;
 using JetBrains.ReSharper.Psi;
@@ -11,6 +12,12 @@ namespace ResxFormatter.Extension.Rider
 {
     public static class FormatterOptionsFactory
     {
+        private static readonly MemoryCache EditorConfigSettingsCache = MemoryCache.Default;
+        private static readonly CacheItemPolicy CacheItemPolicy = new()
+        {
+            SlidingExpiration = TimeSpan.FromHours(1),
+        };
+        
         private static readonly Dictionary<StringComparer, StringComparison> ComparerToComparison = 
             new()
             {
@@ -78,14 +85,21 @@ namespace ResxFormatter.Extension.Rider
             }
 
             // Try finding ResxFormatter settings in .editorconfig.
-            var editorConfig = new ResxEditorConfigSettings(sourceFilePath);
+            var cacheKey = Path.GetDirectoryName(sourceFilePath) ?? sourceFilePath;
+            ResxEditorConfigSettings? editorConfig = EditorConfigSettingsCache.Get(cacheKey) as ResxEditorConfigSettings;
+            if (editorConfig == null)
+            {
+                editorConfig = new ResxEditorConfigSettings(sourceFilePath);
+                EditorConfigSettingsCache.Add(new CacheItem(cacheKey, editorConfig), CacheItemPolicy);
+            }
+
             if (editorConfig.IsActive)
             {
                 formatterOptions.SortOrder = ComparerToComparison[editorConfig.Comparer];
                 formatterOptions.RemoveXsdSchema = editorConfig.RemoveXsdSchema;
                 formatterOptions.RemoveDocumentationComment = editorConfig.RemoveDocumentationComment;
             }
-            
+
             return formatterOptions;
         }
         

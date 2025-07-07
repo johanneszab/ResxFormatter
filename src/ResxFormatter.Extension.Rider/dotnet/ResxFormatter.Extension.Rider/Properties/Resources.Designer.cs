@@ -96,7 +96,7 @@ namespace ResxFormatter.Extension.Rider.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Import Visual Studio ResxFormatter Settings.
+        ///   Looks up a localized string similar to Import Visual Studio ResxFormatter settings.
         /// </summary>
         internal static string ImportResxFormatterEditorConfig {
             get {
@@ -156,6 +156,15 @@ namespace ResxFormatter.Extension.Rider.Properties {
         internal static string SearchToDriveRootToolTip {
             get {
                 return ResourceManager.GetString("SearchToDriveRootToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
             }
         }
         
