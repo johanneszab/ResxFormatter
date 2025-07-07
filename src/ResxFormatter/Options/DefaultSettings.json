@@ -1,5 +1,8 @@
 ﻿{
+  "ImportResxFormatterEditorConfig": true,
   "FormatOnSave": true,
   "SortOrder": 5,
+  "RemoveXsdSchema": false,
+  "RemoveDocumentationComment": false,
   "SearchToDriveRoot": false
 }
