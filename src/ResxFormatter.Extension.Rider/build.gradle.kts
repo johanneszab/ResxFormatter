@@ -1,7 +1,5 @@
 // Reference https://www.jetbrains.org/intellij/sdk/docs/tutorials/build_system/gradle_guide.html
 import org.jetbrains.intellij.platform.gradle.Constants
-import kotlin.io.path.absolute
-import kotlin.io.path.isDirectory
 import kotlin.io.path.isRegularFile
 
 plugins {
@@ -37,14 +35,6 @@ val BuildConfiguration: String by project
 
 version = PluginVersion
 
-val riderSdkPath by lazy {
-    val path = intellijPlatform.platformPath.resolve("lib/DotNetSdkForRdPlugins").absolute()
-    if (!path.isDirectory()) error("$path does not exist or not a directory")
-
-    println("Rider SDK path: $path")
-    return@lazy path
-}
-
 kotlin {
     jvmToolchain {
         languageVersion = JavaLanguageVersion.of(21)
@@ -74,7 +64,7 @@ tasks {
         inputs.property("buildConfiguration", BuildConfiguration)
 
         executable("dotnet")
-        args("msbuild","/t:Restore;Rebuild","${DotnetSolution}","/p:Configuration=${BuildConfiguration}")
+        args("msbuild","/t:Restore;Rebuild",DotnetSolution,"/p:Configuration=${BuildConfiguration}")
         workingDir(rootDir)
     }
 
@@ -82,7 +72,7 @@ tasks {
         outputs.upToDateWhen { false }
         doLast {
             copy {
-                from("${buildDir}/distributions/${rootProject.name}-${version}.zip")
+                from("${layout.buildDirectory}/distributions/${rootProject.name}-${version}.zip")
                 into("${rootDir}/output")
             }
 
@@ -94,7 +84,7 @@ tasks {
 
             exec {
                 executable("dotnet")
-                args("msbuild","/t:Pack","${DotnetSolution}","/p:Configuration=${BuildConfiguration}","/p:PackageOutputPath=${rootDir}/output","/p:PackageReleaseNotes=${changeNotes}","/p:PackageVersion=${version}")
+                args("msbuild","/t:Pack",DotnetSolution,"/p:Configuration=${BuildConfiguration}","/p:PackageOutputPath=${rootDir}/output","/p:PackageReleaseNotes=${changeNotes}","/p:PackageVersion=${version}")
             }
         }
     }
@@ -139,16 +129,16 @@ tasks {
                 "$outputFolder/EditorConfig.Core.dll"
         )
 
-        dllFiles.forEach({ f ->
+        dllFiles.forEach { f ->
             val file = file(f)
-            from(file, { into("${rootProject.name}/dotnet") })
-        })
+            from(file) { into("${rootProject.name}/dotnet") }
+        }
 
         doLast {
-            dllFiles.forEach({ f ->
+            dllFiles.forEach { f ->
                 val file = file(f)
-                if (!file.exists()) error("File ${file} does not exist")
-            })
+                if (!file.exists()) error("File $file does not exist")
+            }
         }
     }
 }
