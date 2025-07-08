@@ -85,21 +85,25 @@ namespace ResxFormatter.Extension.Rider
             }
 
             // Try finding ResxFormatter settings in .editorconfig.
-            var cacheKey = Path.GetDirectoryName(sourceFilePath) ?? sourceFilePath;
-            ResxEditorConfigSettings? editorConfig = EditorConfigSettingsCache.Get(cacheKey) as ResxEditorConfigSettings;
-            if (editorConfig == null)
+            var importEditorConfigSettings = settings.GetValue((ResxFormatterSettings s) => s.ImportResxFormatterEditorConfig);
+            if (importEditorConfigSettings)
             {
-                editorConfig = new ResxEditorConfigSettings(sourceFilePath);
-                EditorConfigSettingsCache.Add(new CacheItem(cacheKey, editorConfig), CacheItemPolicy);
-            }
+                var cacheKey = Path.GetDirectoryName(sourceFilePath) ?? sourceFilePath;
+                var editorConfig = EditorConfigSettingsCache.Get(cacheKey) as ResxEditorConfigSettings;
+                if (editorConfig == null)
+                {
+                    editorConfig = new ResxEditorConfigSettings(sourceFilePath);
+                    EditorConfigSettingsCache.Add(new CacheItem(cacheKey, editorConfig), CacheItemPolicy);
+                }
 
-            if (editorConfig.IsActive)
-            {
-                formatterOptions.SortOrder = ComparerToComparison[editorConfig.Comparer];
-                formatterOptions.RemoveXsdSchema = editorConfig.RemoveXsdSchema;
-                formatterOptions.RemoveDocumentationComment = editorConfig.RemoveDocumentationComment;
+                if (editorConfig.IsActive)
+                {
+                    formatterOptions.SortOrder = ComparerToComparison[editorConfig.Comparer];
+                    formatterOptions.RemoveXsdSchema = editorConfig.RemoveXsdSchema;
+                    formatterOptions.RemoveDocumentationComment = editorConfig.RemoveDocumentationComment;
+                }
             }
-
+            
             return formatterOptions;
         }
         
