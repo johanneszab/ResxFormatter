@@ -1,14 +1,14 @@
 <Project>
   <PropertyGroup>
     <SdkVersion>2025.1.0</SdkVersion>
-    <Title>ResX Formatter</Title>
+    <Title>Resx Formatter</Title>
     <Description>Resx Formatter is an extension that allows to define the sort order of the XML data nodes when saving a resx file. Therefore, this extension can help you/your team to mitigate merge conflicts by sorting the resx keys in a particular, well-defined order.</Description>
   
     <Authors>Author</Authors>
     <Copyright>Copyright $([System.DateTime]::Now.Year) johanneszab</Copyright>
     <PackageTags>rider resx formatter resxformatter formatting formatter format plugin</PackageTags>
   
-    <PackageProjectUrl>https://github.com/johanneszab/ResXFormatter</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/johanneszab/ResxFormatter</PackageProjectUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/johanneszab/ResxFormatter/master/LICENSE.txt</PackageLicenseUrl>
     <PackageIconUrl>https://github.com/johanneszab/ResxFormatter/raw/master/resources/icon200.jpg</PackageIconUrl>
   </PropertyGroup>

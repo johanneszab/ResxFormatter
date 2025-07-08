@@ -65,7 +65,7 @@
     </data>
     <data name="ImportResxFormatterEditorConfigToolTip" xml:space="preserve">
         <value>Read ResxFormatter settings from .editorconfig, if available.
-Overwrites all other settings.</value>
+Overwrites all settings.</value>
     </data>
     <data name="Settings" xml:space="preserve">
         <value>Settings</value>

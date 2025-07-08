@@ -106,7 +106,7 @@ namespace ResxFormatter.Extension.Rider.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to Read ResxFormatter settings from .editorconfig, if available.
-        ///Overwrites all other settings..
+        ///Overwrites all settings..
         /// </summary>
         internal static string ImportResxFormatterEditorConfigToolTip {
             get {

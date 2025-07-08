@@ -5,7 +5,7 @@ using JetBrains.Util;
 
 namespace ResxFormatter.Extension.Rider
 {
-    [SettingsKey(typeof(CodeStyleSettings), "Settings for ResX Formatter")]
+    [SettingsKey(typeof(CodeStyleSettings), "Settings for Resx Formatter")]
     public class ResxFormatterSettings
     {
         [SettingsEntry(DefaultValue: true, Description: "Read ResxFormatter settings from .editorconfig, if available.\r\nOverwrites all other settings.")]

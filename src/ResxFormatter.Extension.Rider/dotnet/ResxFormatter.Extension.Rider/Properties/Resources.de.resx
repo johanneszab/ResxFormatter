@@ -55,7 +55,7 @@
     </data>
     <data name="ImportResxFormatterEditorConfigToolTip" xml:space="preserve">
         <value>Liest die ResxFormatter settings aus der .editorconfig, falls vorhanden
-Überschreibt alle übrigen Einstellungen.</value>
+Überschreibt alle Einstellungen.</value>
     </data>
     <data name="Settings" xml:space="preserve">
         <value>Einstellungen</value>
