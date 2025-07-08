@@ -12,5 +12,5 @@ variables:
 name: $(major).$(Date:yyyyMMdd).$(patch).0
 
 jobs:
-- template: ./templates/run-tests-public.yaml
-- template: ./templates/build-extension-rider-public.yaml
+- template: ./templates/run-tests.yaml
+- template: ./templates/build-extension-rider.yaml
