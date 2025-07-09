@@ -69,7 +69,7 @@ public class ResxEditorConfigSettings : IFormatSettings
         }
     }
 
-    public StringComparer Comparer { get; private set; } = StringComparer.Ordinal;
+    public StringComparer Comparer { get; private set; } = StringComparer.OrdinalIgnoreCase;
     public bool IsActive { get; }
     public bool RemoveDocumentationComment { get; }
     public bool RemoveXsdSchema { get; }

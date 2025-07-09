@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
@@ -10,6 +11,11 @@ namespace ResxFormatter
     public class FormatterService(IFormatterOptions options)
     {
         private static readonly XName NameAttributeName = XNamespace.None.GetName(@"name");
+        private const string FakeSchema = "<schema />";
+        private static string Original => ResXResourceWriterStub.ResourceSchemaWithComment;
+        private static string OriginalComment { get; } = Comment(ResXResourceWriterStub.ResourceSchemaWithComment);
+        private static string OriginalCommentContent { get; } = CommentContent(ResXResourceWriterStub.ResourceSchemaWithComment);
+        private static string OriginalSchema { get; } = Schema(ResXResourceWriterStub.ResourceSchemaWithComment);
 
         /// <summary>
         /// Execute styling from string input
@@ -18,80 +24,137 @@ namespace ResxFormatter
         /// <returns></returns>
         public string FormatDocument(string resxDocument)
         {
-            XDocument document = XDocument.Parse(resxDocument, LoadOptions.None);
-            var documentRoot = document.Root;
+            var document = XDocument.Parse(resxDocument, LoadOptions.None);
             
-            var hasChanged = Sort(documentRoot!, options.SortOrder);
+            var hasChanged = SortResx(document, options);
             if (!hasChanged)
             {
                 return resxDocument;
             }
 
-            using StringWriterWithEncoding writer = new StringWriterWithEncoding(Encoding.UTF8);
+            using var writer = new StringWriterWithEncoding(Encoding.UTF8);
             document.Save(writer);
             return writer.ToString().Replace("\r\n", "\n");
         }
         
-        private bool Sort(XElement root, StringComparison stringComparison)
+        private bool SortResx(XDocument document, IFormatterOptions formatterOptions)
         {
-            var comparer = new DelegateComparer<string>((left, right) => string.Compare(left, right, stringComparison));
-            bool schemaRemoved = false;
-            var defaultNamespace = root.GetDefaultNamespace();
-            
-            if (options.RemoveXsdSchema || options.RemoveDocumentationComment)
+            var hasSchemaRemoved = false;
+            var hasCommentRemoved = false;
+            var toSave = new List<XNode>();
+            var toSort = new List<XElement>();
+            var comparer = StringComparer.FromComparison(options.SortOrder);
+
+            foreach (var node in document.Root!.Nodes())
             {
-                foreach (var node in root.Nodes())
+                if (formatterOptions.RemoveXsdSchema)
                 {
-                    if (options.RemoveXsdSchema && node is XElement { Name.LocalName: "schema" })
+                    if (!hasSchemaRemoved && node is XElement { Name.LocalName: "schema" })
                     {
-                        node.Remove();
-                        schemaRemoved = true;
+                        toSave.Add(XElement.Parse(FakeSchema));
+                        hasSchemaRemoved = true;
                         continue;
                     }
-                    
-                    if (options.RemoveDocumentationComment && node.NodeType == XmlNodeType.Comment)
+                }
+
+                if (formatterOptions.RemoveDocumentationComment)
+                {
+                    if (!hasCommentRemoved && node.NodeType == XmlNodeType.Comment)
                     {
-                        node.Remove();
-                        schemaRemoved = true;
+                        hasCommentRemoved = true;
+                        continue;
                     }
+                }
+
+                if (node is XElement { Name.LocalName: "data" or "metadata" } element)
+                {
+                    toSort.Add(element);
+                }
+                else
+                {
+                    toSave.Add(node);
                 }
             }
             
-            var dataNodeName = defaultNamespace.GetName(@"data");
+            var sorted = toSort.
+                OrderBy(GetName, comparer)
+                .ToList();
 
-            var nodes = root
-                .Elements(dataNodeName)
-                .ToArray();
-
-            var sortedNodes = nodes
-                .OrderBy(GetName, comparer)
-                .ToArray();
-
-            var nodesSorted = SortNodes(root, nodes, sortedNodes);
-            return schemaRemoved || nodesSorted;
-
-            static string GetName(XElement node)
+            var hasCommentAdded = false;
+            if (!formatterOptions.RemoveDocumentationComment && !HasDocumentationComment(document))
             {
-                return node.Attribute(NameAttributeName)?.Value.TrimStart('>') ?? string.Empty;
+                toSave.Insert(0, new XComment(OriginalCommentContent));
+                hasCommentAdded = true;
             }
+
+            var hasSchemaAdded = false;
+            if (!formatterOptions.RemoveXsdSchema && !HasSchemaNode(document))
+            {
+                toSave.Insert(1, XElement.Parse(OriginalSchema));
+                hasSchemaAdded = true;
+            }
+
+            var requiresSorting = !toSort.SequenceEqual(sorted);
+            if (hasSchemaRemoved || hasCommentRemoved || hasCommentAdded || hasSchemaAdded || requiresSorting)
+            {
+                toSave.AddRange(sorted);
+                document.Root.ReplaceNodes(toSave);
+                return true;
+            }
+
+            return false;
+        }
+
+        private static string GetName(XElement node)
+        {
+            return node.Attribute(NameAttributeName)?.Value.TrimStart('>') ?? string.Empty;
         }
         
-        private bool SortNodes(XElement root, XElement[] nodes, XElement[] sortedNodes)
+        private static bool HasDocumentationComment(XDocument document)
         {
-            if (nodes.SequenceEqual(sortedNodes))
+            if (document.Root!.Nodes().FirstOrDefault(n => n.NodeType == XmlNodeType.Comment) is not XComment firstComment)
+            {
                 return false;
-
-            foreach (var item in nodes)
-            {
-                item.Remove();
             }
 
-            foreach (var item in sortedNodes)
+            var value = RemoveWhiteSpace(firstComment.ToString());
+            var schema = RemoveWhiteSpace(OriginalComment);
+            return value == schema;
+
+            string RemoveWhiteSpace(string text) => string.Join("", text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+        }
+
+        private static bool HasSchemaNode(XDocument document)
+        {
+            if (document.Root!.Nodes().FirstOrDefault(n => n.NodeType == XmlNodeType.Element) is not XElement firstElement)
             {
-                root.Add(item);
+                return false;
             }
 
-            return true;
+            var value = RemoveWhiteSpace(firstElement.ToString());
+            var schema = RemoveWhiteSpace(OriginalSchema);
+            return value == schema;
+
+            string RemoveWhiteSpace(string text) => string.Join("", text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+        }
+        
+        private static string Comment(string text)
+        {
+            var endOfComment = text.IndexOf("-->", StringComparison.Ordinal);
+            return endOfComment > 0 ? text.Substring(0, endOfComment + 3) : text;
+        }
+
+        private static string CommentContent(string text)
+        {
+            var startOfComment = text.IndexOf("<!--", StringComparison.Ordinal);
+            var endOfComment = text.IndexOf("-->", StringComparison.Ordinal);
+            return startOfComment > 0 && endOfComment > 0 ? text.Substring(startOfComment + 4, endOfComment - startOfComment - 4) : text;
+        }
+
+        private static string Schema(string text)
+        {
+            var endOfComment = text.IndexOf("-->", StringComparison.Ordinal);
+            return endOfComment > 0 ? text.Substring(endOfComment + 3).Trim() : text;
         }
     }
 }
