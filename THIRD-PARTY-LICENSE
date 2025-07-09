@@ -1,4 +1,4 @@
-** ResxFormatter; src/ResxFormatter/Options/ResxEditorConfigSettings.cs -- https://github.com/stefanegli/ResxFormatter/tree/master
+** ResxFormatter; src/ResxFormatter/Options/ResxEditorConfigSettings.cs, src/ResxFormatter/FormatterService.cs -- https://github.com/stefanegli/ResxFormatter/tree/master
 Optimizes resx files after saving: Removes schema and comments (in particular the 3KB documentation that is included in every resx file) and sorts entries alphabetically so that they look like this:
  Copyright (c) 2019 Stefan Egli
  All rights reserved.
