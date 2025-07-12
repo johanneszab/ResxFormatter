@@ -8,9 +8,10 @@
     <p>Formats .resx files: Sorts data entries by name and removes xml comments.</p>
 
     <ul><li>Sorts data entries.</li>
-    <li>Can remove XSD schema and documentation comment.</li>
-    <li>Imports <a href="https://github.com/stefanegli/ResxFormatter">Stefan Egli ResxFormatter (VS)</a> .editorconfig settings.</li>
+    <li>Optionally removes the XSD schema or documentation comment.</li>
+    <li>Imports <a href="https://github.com/stefanegli/ResxFormatter">Stefan Eglis ResxFormatter (VS)</a> .editorconfig settings.</li>
     <li>Allows to share <a href="https://github.com/johanneszab/ResxFormatter/blob/master/src/ResxFormatter/Options/DefaultSettings.json">a common configuration</a>.</li></ul>
+    To configure Resx Formatter, select <b>Settings | Tools | Resx Formatter</b>.
   ]]></description>
   <change-notes>
     <![CDATA[
@@ -28,10 +29,6 @@
             id="ResxFormatterOptionsPage"
             key="configurable.name.resxformatter.options.title" />/>
   </extensions>
-
-  <actions>
-    <!-- Add your actions here -->
-  </actions>
 
   <projectListeners>
     <listener

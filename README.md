@@ -17,8 +17,6 @@ There are currently two modes available:
 1. format resx file when saved
 2. format resx file via context action
 
-Alternatively, you can import [Stefan Eglis ResXFormatter](https://github.com/stefanegli/ResxFormatter) settings from the .editorconfig.
-
 ## Format when saved
 Per default, ResxFormatter sorts the XML data nodes of the resource file by StringComparison.OrdinalIgnoreCase. However,
 that can be changed in the settings. With this settings enabled, ResxFormatter listens for saves of .resx files in
@@ -40,6 +38,8 @@ You can disable the sort on save functionality via the settings, and share a com
 within your vcs to share common settings between developers.
 
 ![ResxFormatter Settings](https://raw.githubusercontent.com/johanneszab/ResxFormatter/refs/heads/master/media/settings.png "Settings")
+
+Alternatively, you can import [Stefan Eglis ResXFormatter](https://github.com/stefanegli/ResxFormatter) settings from the .editorconfig.
 
 # How to build
 
