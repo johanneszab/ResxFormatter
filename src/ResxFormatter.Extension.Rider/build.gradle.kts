@@ -1,4 +1,4 @@
-// Reference https://www.jetbrains.org/intellij/sdk/docs/tutorials/build_system/gradle_guide.html
+// Reference https://plugins.jetbrains.com/docs/intellij/configuring-gradle.html
 import org.jetbrains.intellij.platform.gradle.Constants
 import kotlin.io.path.isRegularFile
 

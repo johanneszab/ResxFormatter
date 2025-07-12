@@ -1,15 +1,21 @@
-<idea-plugin url="https://github.com/johanneszab/ResxFormatter">
+<idea-plugin require-restart="true">
   <name>Resx Formatter</name>
-  <id>resxformatter.rider</id>
-  <vendor url="https://github.com/johanneszab">johanneszab</vendor>
+  <id>resxformatter.johanneszab.rider</id>
+  <vendor url="https://github.com/johanneszab/ResxFormatter">Johannes Meyer zum Alten Borgloh</vendor>
   <category>Formatting</category>
   <version>_PLACEHOLDER_</version>
   <description><![CDATA[
-    <p>Resx Formatter is an extension that allows to define the sort order of the XML data nodes when saving a resx file. Therefore, this extension can help you/your team to mitigate merge conflicts by sorting the resx keys in a particular, well-defined order.</p>
+    <p>Formats .resx files: Sorts data entries by name and removes xml comments.</p>
+
+    <ul><li>Sorts data entries.</li>
+    <li>Can remove XSD schema and documentation comment.</li>
+    <li>Imports <a href="https://github.com/stefanegli/ResxFormatter">Stefan Egli ResxFormatter (VS)</a> .editorconfig settings.</li>
+    <li>Allows to share <a href="https://github.com/johanneszab/ResxFormatter/blob/master/src/ResxFormatter/Options/DefaultSettings.json">a common configuration</a>.</li></ul>
   ]]></description>
-  <change-notes><![CDATA[
-    <p>Check out our <a href="https://github.com/johanneszab/ResxFormatter/releases">releases</a> page for a full history of changes.</p>
-  ]]></change-notes>
+  <change-notes>
+    <![CDATA[
+]]>
+  </change-notes>
 
   <resource-bundle>messages.ResxFormatterBundle</resource-bundle>
 
