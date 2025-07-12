@@ -31,9 +31,14 @@ dependencies {
 
 // Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html
 intellijPlatform {
+    pluginConfiguration {
+        ideaVersion {
+            sinceBuild = providers.gradleProperty("pluginSinceBuild")
+        }
+    }
     pluginVerification {
         ides {
-            ide(IntelliJPlatformType.Rider, providers.gradleProperty("pluginVerificationIdeVersion").get(), false)
+            ide(IntelliJPlatformType.Rider, libs.versions.rider.get(), false)
         }
     }
 }
