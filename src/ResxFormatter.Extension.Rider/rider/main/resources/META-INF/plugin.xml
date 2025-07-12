@@ -16,9 +16,14 @@
   <extensions defaultExtensionNs="com.intellij">
     <applicationConfigurable groupId="tools" instance="plugins.resxformatter.rider.ResxFormatterOptionsPage" />
   </extensions>
-  <project-components>
-    <component>
-      <implementation-class>plugins.resxformatter.rider.ResxFormatterComponent</implementation-class>
-    </component>
-  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+  <projectListeners>
+    <listener
+            class="plugins.resxformatter.rider.ResxFormatterListener"
+            topic="com.intellij.openapi.fileEditor.FileDocumentManagerListener"/>
+  </projectListeners>
 </idea-plugin>
