@@ -1,5 +1,6 @@
 // Reference https://plugins.jetbrains.com/docs/intellij/configuring-gradle.html
 import org.jetbrains.intellij.platform.gradle.Constants
+import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 import kotlin.io.path.isRegularFile
 
 plugins {
@@ -27,6 +28,16 @@ dependencies {
     jetbrainsRuntime()
   }
 }
+
+// Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html
+intellijPlatform {
+    pluginVerification {
+        ides {
+            ide(IntelliJPlatformType.Rider, providers.gradleProperty("pluginVerificationIdeVersion").get(), false)
+        }
+    }
+}
+
 
 val DotnetPluginId: String by project
 val DotnetSolution: String by project
