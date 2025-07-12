@@ -1,4 +1,4 @@
-<idea-plugin require-restart="false">
+<idea-plugin require-restart="true">
   <name>Resx Formatter</name>
   <id>resxformatter.johanneszab</id>
   <vendor url="https://github.com/johanneszab/ResxFormatter">Johannes Meyer zum Alten Borgloh</vendor>
