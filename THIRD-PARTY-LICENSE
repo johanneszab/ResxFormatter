@@ -1,11 +1,11 @@
 ** ResxFormatter; src/ResxFormatter/Options/ResxEditorConfigSettings.cs, src/ResxFormatter/FormatterService.cs -- https://github.com/stefanegli/ResxFormatter/tree/master
-Optimizes resx files after saving: Removes schema and comments (in particular the 3KB documentation that is included in every resx file) and sorts entries alphabetically so that they look like this:
+Optimizes resx files after saving: Removes schema and comments (in particular the 3KB documentation that is included in every resx file) and sorts entries alphabetically
  Copyright (c) 2019 Stefan Egli
  All rights reserved.
 
 MIT License
 
-Copyright (c) 2025 Johannes Meyer zum Alten Borgloh
+Copyright (c) 2019 Stefan Egli
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,3 +24,663 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+--------------------------------------------------------------------------------
+
+** editorconfig; version 0.15.0 -- https://github.com/editorconfig/editorconfig-core-net
+Copyright editorconfig contributors.
+
+The MIT License
+
+Copyright (c) 2016 EditorConfig Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+** editorconfig; version 0.15.0 -- https://github.com/editorconfig/editorconfig-core-net
+Copyright editorconfig contributors.
+
+--------------------------------------------------------------------------------
+
+** Newtownsoft.Json; version 13.0.3 -- https://www.newtonsoft.com/json
+Copyright editorconfig contributors.
+
+The MIT License (MIT)
+
+Copyright (c) 2007 James Newton-King
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+--------------------------------------------------------------------------------
+
+** xunit; version 2.9.3 -- https://xunit.net/
+Copyright editorconfig contributors.
+
+Unless otherwise noted, the source code here is covered by the following license:
+
+	Copyright (c) .NET Foundation and Contributors
+	All Rights Reserved
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+
+The source in src/xunit.v3.runner.common/Utility/ConsoleHelper.cs was adapted from code
+that is covered the following license (copied from
+https://github.com/Microsoft/msbuild/blob/ab090d1255caa87e742cbdbc6d7fe904ecebd975/LICENSE):
+
+	MSBuild
+
+	The MIT License (MIT)
+
+	Copyright (c) .NET Foundation and contributors
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+
+--------------------------------------------------------------------------------
+
+** JetBrains.Rider.SDK; version 2025.1.0 -- https://www.jetbrains.com/legal/third-party-software/?index=3&list=PLQ176FUIyIUZwhmomxBv9YPIvUmulyz4Q&v=IlLy1PKf3zE&product=RD&version=2025.1
+Copyright JetBrains Rider SDK contributors and all its dependencies
+
+Software	License	Version
+.NET Runtime	MIT License (.NET Foundation and Contributors)	8.0.0-preview1
+.babelrc JSON Schema (.babelrc-schema.json)	Apache 2.0	JSON schema for Babel 6+ configuration files
+.eslintrc JSON Schema (.eslintrc-schema.json)	Apache 2.0	JSON schema for ESLint 4 configuration files
+@parcel/watcher	MIT	2.0.0
+ANTLR 4.9 Runtime	BSD 3-Clause	4.9.2
+ANTLRv2 Runtime	ANTLR Software Rights Notice	2.7.7.3
+ASM (JetBrains's fork)	BSD 3-Clause	9.6.1
+AhoCorasickDoubleArrayTrie	Apache 2.0	1.2.3
+Amazon Ion Java	Apache 2.0	1.11.9
+Apache Axis	Apache 2.0	1.4
+Apache Commons CLI	Apache 2.0	1.9.0
+Apache Commons Codec	Apache 2.0	1.17.1
+Apache Commons Collections	Apache 2.0	3.2.2
+Apache Commons Compress	Apache 2.0	1.26.1
+Apache Commons Discovery	Apache 2.0	0.4
+Apache Commons HTTPClient	Apache 2.0	3.1 (with patch by JetBrains)
+Apache Commons IO	Apache 2.0	2.16.1
+Apache Commons Imaging (JetBrains's fork)	Apache 2.0	1.0-RC-1
+Apache Commons Lang	Apache 2.0	3.17.0
+Apache Commons Logging	Apache 2.0	1.2
+Apache Commons Net	Apache 2.0	3.9.0
+Apache Commons Pool	Apache 2.0	2.12.0
+Apache Commons Text	Apache 2.0	1.13.0
+Apache Commons VFS (JetBrains's fork)	Apache 2.0	3.0.10
+Apache Commons VFS Jackrabbit 2	Apache 2.0	3.0.10
+Apache Ivy	Apache 2.0	2.5.2
+Apache Lucene	Apache 2.0	9.12.0
+Appccelerate.StateMachine	Apache License 2.0	3.3.0
+AsciiDoc support for Visual Studio Code	MIT	3.2.4
+AssertJ Swing	Apache 2.0	3.17.1
+AssertJ fluent assertions	Apache 2.0	3.26.3
+AsyncAPI React Component	Apache 2.0	1.0.0-next.47
+Atlassian Commonmark	BSD 2-Clause	0.17.0
+AutoMapper Package	MIT License (2010 Jimmy Bogard)	10.1.2
+Autofac Package	MIT License (2014 Autofac Project)	4.8.1
+Automaton	BSD 2-Clause	1.12-4
+Bash-Preexec	MIT	0.5.0
+BeatyBit Armature Core Package	Apache License 2.0	2.0.0.22
+BeatyBit Armature Interface Package	Apache License 2.0	2.0.0.22
+BeatyBit Armature Package	Apache License 2.0	2.0.0.22
+Bodymovin	MIT	5.5.10
+Boost	Boost Software License 1.0	1.80.0
+BouncyCastle.NET Cryptography	MIT License (Legion of the Bouncy Castle Inc. 2000-2024)	2.4.0
+CGLib	Apache 2.0	3.3.0
+CLR Memory Diagnostics (ClrMD)	MIT License (Microsoft Corporation)	2.1.20241003.5
+CMake For VisualStudio Code	MIT	0.0.17
+Castle Core Package	Apache License 2.0	4.4.1
+ChromeProtocol Core Package	MIT License (2024 Andrii Rublov)	1.2.3
+ChromeProtocol Domains Package	MIT License (2024 Andrii Rublov)	1.2.3
+ChromeProtocol Runtime Package	MIT License (2024 Andrii Rublov)	1.2.3
+Clang-Format	Apache License 2.0 WITH LLVM Exception	20.0.0
+Clang-tidy	Apache License 2.0 WITH LLVM Exception	20.1.0.1
+Clikt	Apache 2.0	3.5.4
+ClrStack	MIT License (JetBrains s.r.o)	2.0.15
+Command Line Interface Parser for Java	Apache 2.0	1.1.6
+Common Annotations for the JavaTM Platform API	CDDL 1.1	1.3.2
+Common interfaces, helpers and data models classes for Java Authentication Library	MIT	0.6.4
+Compose Multiplatform	Apache 2.0	1.7.1
+DebuggerComInteropAnalyzer	Apache License 2.0	1.0.1
+DockerUtils.cs	Apache License 2.0	1.0.5
+DotNetZip Package	Microsoft Public License	1.11.0
+Dynamic Data	MIT License (Roland Pheasant 2011-2019)	6.16.2
+EditorConfig Java Parser	Apache 2.0	0.3.0
+ExCSS .NET Stylesheet Parser	MIT License (2024 Tyler Brinks)	4.2.4
+FSharp Core Package	MIT License (Microsoft Corporation)	9.0.201
+Fantomas Core Package	Apache License 2.0	6.3.15
+Fantomas FCS Package	Apache License 2.0	6.3.15
+Feather Icons	MIT	v4.29.1
+FiraCode	OFL	1.206
+Flexmark	BSD 2-Clause	0.64.8
+Flow library files	MIT	0.81.0
+Git-Credential-Manager	MIT License (Microsoft Corporation)	0.1.1
+Godot Tools	MIT License (2016-2022 The Godot Engine community)	2.3.0.1
+GodotTools IdeMessaging Package	MIT License (2014-present Godot Engine contributors (see AUTHORS.md); 2007-2014 Juan Linietsky, Ariel Manzur)	1.1.2
+Google Blink source code	BSD 3-Clause	custom revision
+Google FlatBuffers Package	Apache License 2.0	23.5.26
+GoogleAnalyticsTracker.Core	Microsoft Public License	7.0.1
+GoogleAnalyticsTracker.Simple	Microsoft Public License	7.0.1
+GraalVM JavaScript	UPL 1.0	24.0.2
+Groovy	Apache 2.0	3.0.19
+Groovy JSON	Apache 2.0	3.0.19
+Groovy JSR-223	Apache 2.0	3.0.19
+Groovy Templates	Apache 2.0	3.0.19
+Groovy XML	Apache 2.0	3.0.19
+Gson	Apache 2.0	2.12.1
+Guava	Apache 2.0	33.4.0-jre
+HDR Histogram	Public Domain (CC0)	2.2.2
+HarfBuzzSharp	MIT License (Microsoft Corporation)	7.3.0.203
+HarfBuzzSharp - Native Assets for Win32	MIT License (Microsoft Corporation)	7.3.0.203
+HashiCorp Syntax	MPL 2.0	0.6.0
+HtmlAgilityPack Package	MIT License (ZZZ Projects Inc)	1.11.60
+HttpComponents HttpClient	Apache 2.0	4.5.14
+ICU4J	Unicode	73.2
+ISO RELAX	MIT	20030108
+Ice4j	Apache 2.0	3.0-54-g2baae57
+Implementation of json-rpc for .NET	Apache License 2.0	1.0.2
+Inconsolata	OFL	001.010
+Incremental DOM	Apache 2.0	0.7.0
+IntelliJ IDEA Code Coverage Agent	Apache 2.0	1.0.766
+JAXB (JSR 222) Reference Implementation	CDDL 1.1	2.3.9
+JAXB (Java Architecture for XML Binding) API	CDDL 1.1	2.3.1
+JCEF	BSD 3-Clause	122.1.9-gd14e051-chromium-122.0.6261.94-api-1.18-251-b27
+JCIP Annotations	Creative Commons 2.5 Attribution	1.0
+JCodings	MIT	1.0.55
+JDOM (JetBrains's fork)	JDOM License	2
+JGit (Settings Sync and SettingsRepo)	Eclipse Distribution License 1.0	6.6.1.202309021850-r-jb-202407181518
+JGoodies Common	BSD 3-Clause	1.4.0
+JGoodies Forms	BSD 3-Clause	1.1-preview
+JGraphT	EPL 2.0	1.5.1
+JNA	Apache 2.0	5.14.0
+JOOX	Apache 2.0	2.0.1
+JRuby Parser 0.5.3	CPL 1.0	0.5.3
+JRuby Parser 0.5.4	CPL 1.0	0.5.4
+JSON Schema	Apache 2.0	custom revision
+JSON Schema (schema.json)	BSD 3-Clause	draft-04
+JSON Schema (schema06.json)	BSD 3-Clause	draft-06
+JSON Schema (schema07.json)	BSD 3-Clause	draft-07
+JSON Schema for Typings TypeScript definitions manager (typings-schema.json)	Apache 2.0	custom revision
+JSON in Java	JSON License	20240205
+JSTUN	Apache 2.0	0.7.5.20200723
+Jackson	Apache 2.0	2.17.0
+Jackson Databind	Apache 2.0	2.17.2
+Jackson Dataformat CBOR	Apache 2.0	2.16.0
+Jackson Dataformat YAML	Apache 2.0	2.17.2
+Jackson Module Kotlin	Apache 2.0	2.17.2
+Jakarta ORO	Apache 2.0	2.0.8
+Java Compatibility	GPL 2.0 + Classpath	1.0.1
+Java Server Pages (JSP) for Visual Studio Code	MIT	0.0.3
+Java String Similarity	MIT	2.0.0
+Java-WebSocket	MIT	1.6.0
+JavaBeans Activation Framework	CDDL 1.1	1.2.0
+JavaFacker	Apache 2.0	1.0.2
+Jaxen	BSD 3-Clause	1.2.0
+Jayway JsonPath	Apache 2.0	2.9.0
+JetBrains Annotations	MIT License (2016-2024 JetBrains s.r.o)	2024.3.0
+JetBrains Annotations	Apache 2.0	24.0.0
+JetBrains Annotations for Java 5	Apache 2.0	24.0.0
+JetBrains Avalonia Angle Natives windows-arm64 Package	MIT License (2023 The AvaloniaUI Project)	2.1.0.195
+JetBrains Avalonia Angle Natives windows-x64 Package	MIT License (2023 The AvaloniaUI Project)	2.1.0.195
+JetBrains Avalonia Angle Natives windows-x86 Package	MIT License (2023 The AvaloniaUI Project)	2.1.0.195
+JetBrains Avalonia AvaloniaEdit Package	MIT License (2017-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Controls ColorPicker Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Controls DataGrid Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Desktop Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Diagnostics Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Fonts Inter Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Fonts JetBrainsMonoNL Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia FreeDesktop Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Native Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Remote Protocol Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Skia Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Svg Package	MIT License (Wiesław Šoltés 2024)	11.1.3.293
+JetBrains Avalonia Svg Skia Package	MIT License (Wiesław Šoltés 2024)	11.1.3.293
+JetBrains Avalonia Themes Simple Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Win32 Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia X11 Package	MIT License (2013-2025 The AvaloniaUI Project)	11.1.3.293
+JetBrains Avalonia Xaml Interactions Custom Package	MIT License (Wiesław Šoltés 2024)	11.1.3.293
+JetBrains Avalonia Xaml Interactions Package	MIT License (Wiesław Šoltés 2024)	11.1.3.293
+JetBrains Avalonia Xaml Interactivity Package	MIT License (Wiesław Šoltés 2024)	11.1.3.293
+JetBrains ColorTextBlock Avalonia Package	MIT License (2020 whistyun)	11.1.3.293
+JetBrains DotNetCore DbgShim windows-arm64 Package	MIT License (JetBrains s.r.o)	6.0.20220811.19
+JetBrains DotNetCore DbgShim windows-x64 Package	MIT License (JetBrains s.r.o)	6.0.20220811.19
+JetBrains DotNetCore DbgShim windows-x86 Package	MIT License (JetBrains s.r.o)	6.0.20220811.19
+JetBrains DotNetCore Runtime SupplementaryPackages Sdk linux-arm64 Package	MIT License (.NET Foundation and Contributors)	8.0.20241125.13
+JetBrains DotNetCore Runtime SupplementaryPackages Sdk linux-x64 Package	MIT License (.NET Foundation and Contributors)	8.0.20241125.13
+JetBrains DotNetCore Runtime SupplementaryPackages Sdk macos-arm64 Package	MIT License (.NET Foundation and Contributors)	8.0.20241125.13
+JetBrains DotNetCore Runtime SupplementaryPackages Sdk macos-x64 Package	MIT License (.NET Foundation and Contributors)	8.0.20241125.13
+JetBrains DotNetCore Runtime SupplementaryPackages Sdk windows-arm64 Package	MIT License (.NET Foundation and Contributors)	8.0.20241125.13
+JetBrains DotNetCore Runtime SupplementaryPackages Sdk windows-x64 Package	MIT License (.NET Foundation and Contributors)	8.0.20241125.13
+JetBrains DotNetCore Runtime linux-arm Package	MIT License with third party notices	8.0.20241125.13
+JetBrains DotNetCore Runtime linux-arm64 Package	MIT License with third party notices	8.0.20241125.13
+JetBrains DotNetCore Runtime linux-musl-arm Package	MIT License with third party notices	8.0.20241125.13
+JetBrains DotNetCore Runtime linux-musl-arm64 Package	MIT License with third party notices	8.0.20241125.13
+JetBrains DotNetCore Runtime linux-musl-x64 Package	MIT License with third party notices	8.0.20241125.13
+JetBrains DotNetCore Runtime linux-x64 Package	MIT License with third party notices	8.0.20241125.13
+JetBrains DotNetCore Runtime macos-arm64 Package	MIT License with third party notices	8.0.20241125.13
+JetBrains DotNetCore Runtime macos-x64 Package	MIT License with third party notices	8.0.20241125.13
+JetBrains DotNetCore Runtime windows-arm64 Package	Microsoft Software License Terms (Microsoft .NET Library)	8.0.20241125.13
+JetBrains DotNetCore Runtime windows-x64 Package	Microsoft Software License Terms (Microsoft .NET Library)	8.0.20241125.13
+JetBrains FSharp Compiler Service Package	MIT License (Microsoft Corporation)	2025.1.5
+JetBrains FormatRipper Package	Apache License 2.0	2.2.2
+JetBrains HabitatDetector Package	Apache License 2.0	1.4.3
+JetBrains ICorDebug Package	Apache License 2.0	2.0.20241211.109
+JetBrains Lifetimes Package	Apache License 2.0	2024.3.0
+JetBrains Markdown Avalonia Html Package	MIT License (Simon Baynes 2013; whistyun 2023)	11.1.3.293
+JetBrains Markdown Avalonia Package	MIT License (2010 Bevan Arps, 2020 whistyun)	11.1.3.293
+JetBrains Markdown Avalonia Svg Package	MIT License (2023 grifsun, whistyun)	11.1.3.293
+JetBrains Markdown Avalonia SyntaxHigh Package	MIT License (2021 whistyun)	11.1.3.293
+JetBrains Markdown Avalonia Tight Package	MIT License (2010 Bevan Arps, 2020 whistyun)	11.1.3.293
+JetBrains Microsoft Artifacts Authentication Package	MIT License (2024 Microsoft)	0.2.2.2
+JetBrains Microsoft FileFormats Package	MIT License (Microsoft Corporation)	1.0.150601.3
+JetBrains Microsoft SymbolStore Package	MIT License (Microsoft Corporation)	1.0.150601.3
+JetBrains Microsoft Web WebView2 Package	BSD 3-Clause "New" or "Revised" License (Microsoft Corporation)	1.0.1587.40
+JetBrains NuGet Commands Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet Common Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet Configurations Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet Core Package	Apache License 2.0	2.14.2.20220408
+JetBrains NuGet Credentials Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet DependencyResolver Core Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet Frameworks Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet LibraryModel Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet PackageManagement Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet Packaging Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet ProjectModel Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet Protocol Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet Resolver Package	Apache License 2.0	6.13.20250313.152
+JetBrains NuGet Versioning Package	Apache License 2.0	6.13.20250313.152
+JetBrains Platform LevelDB Native DLLs	BSD 3-Clause "New" or "Revised" License (2011 The LevelDB Authors)	20221018.88.0
+JetBrains Profiler Api Package	Apache License 2.0	1.4.8
+JetBrains Profiler SelfApi Package	Apache License 2.0	2.5.12
+JetBrains RdFramework Package	Apache License 2.0	2024.3.0
+JetBrains RdFramework Reflection Package	Apache License 2.0	2024.3.0
+JetBrains ReSharper TestRunner Adapters MsTest Package	Microsoft Software License Terms (Microsoft .NET Library)	2.16.1.46
+JetBrains ReSharper TestRunner Adapters NUnit2 Package	MIT License (2021 Charlie Poole, Rob Prouse)	2.16.1.33
+JetBrains ReSharper TestRunner Adapters NUnit3 Package	MIT License (2021 Charlie Poole, Rob Prouse)	2.16.1.73
+JetBrains ReSharper TestRunner Adapters VsTest Package	Microsoft Software License Terms (Microsoft .NET Library)	2.16.1.14
+JetBrains ReSharper TestRunner Adapters XUnit Package	Apache License 2.0	2.16.1.43
+JetBrains ReSharper TestRunner Adapters XUnit3 Package	Apache License 2.0	2.16.1.13
+JetBrains ReSharper TestRunner Adapters XUnit3_2 Package	Apache License 2.0	2.16.1.1
+JetBrains ReSharper TestRunner Package	Apache License 2.0, Microsoft Software License Terms (Microsoft .NET Library), MIT License (2021 Charlie Poole, Rob Prouse), MIT License (James Newton-King 2008)	2.16.1.109
+JetBrains ReactiveUI Package	MIT License (.NET Foundation and Contributors)	18.3.1.192
+JetBrains Repack DiaSymReader PortablePdb Package	MIT License (Microsoft Corporation)	1.7.0.20241003
+JetBrains Repack Google Protobuf Package	BSD 3-Clause "New" or "Revised" License (2015, Google Inc)	3.25.0
+JetBrains ReverseMarkdown Package	MIT License (2015 Babu Annamalai)	4.3.0.27
+JetBrains Roslyn References Repack Package	Apache License 2.0	42.42.20250408.194614
+JetBrains Runtime	GPL 2.0 + Classpath	21
+JetBrains Runtime API	Apache 2.0	1.2.0
+JetBrains SharpGen Runtime COM Package	MIT License (2010-2017 Alexandre Mutel, 2017 Jeremy Koritzinsky)	2.0.20241211.109
+JetBrains SharpGen Runtime Package	MIT License (2010-2017 Alexandre Mutel, 2017-2018 Jeremy Koritzinsky)	2.0.20241211.109
+JetBrains ShimSkiaSharp Package	MIT License (Wiesław Šoltés 2024)	11.1.3.293
+JetBrains SignatureVerifier Package	Apache License 2.0	2.2.2
+JetBrains Splat Package	MIT License (.NET Foundation and Contributors)	14.6.37.192
+JetBrains Svg Custom Package	Microsoft Public License	11.1.3.293
+JetBrains Svg Model Package	MIT License (Wiesław Šoltés 2024)	11.1.3.293
+JetBrains Svg Skia Package	MIT License (Wiesław Šoltés 2024)	11.1.3.293
+JetBrains Tmds DBus Protocol Package	MIT License (Tom Deseyn)	0.19.0.199
+JetBrains monodoc Package	MIT License (2013 Xamarin, Inc)	2024.10.6
+JetBrains.DesignerInterop	Apache License 2.0	20210118.30.0
+JetBrains.EnvDTE	Apache License 2.0	20240403.51.0
+JetBrains.EnvDTE.Client	Apache License 2.0	20240403.51.0
+JetBrains.EnvDTE.Host	Apache License 2.0	20240403.51.0
+JetBrains.SharpZipLib.Stripped	MIT License (2000-2018 SharpZipLib Contributors)	1.3.3.30
+JetBrains.System.ServiceProcess.ServiceController	MIT License (Microsoft Corporation)	4.7.2
+Jettison	Apache 2.0	1.5.4
+Jing	BSD 3-Clause	20030619
+Jitsi Utilities	Apache 2.0	1.0-112-gd92472a
+Jline	BSD 3-Clause	3.24.1
+Joni	MIT	2.2.3
+Json.NET	MIT License (James Newton-King 2008)	13.0.1
+Kconfig for the Zephyr Project	MIT	1.2.0
+Kotlin Coroutines for Guava	Apache 2.0	1.8.0-intellij-13
+Kotlin Coroutines for JDK 8	Apache 2.0	1.8.0-intellij-13
+Kotlin Coroutines for Slf4j	Apache 2.0	1.8.0-intellij-13
+Kotlin Multiplatform library for Skia and window management	Apache 2.0	0.8.10
+Kotlin Standard Library	Apache 2.0	2.1.10
+Kotlin multiplatform / multi-format serialization	Apache 2.0	1.7.3
+Kotlin multiplatform / multi-format serialization	Apache 2.0	1.7.3
+Kotlin multiplatform / multi-format serialization	Apache 2.0	1.7.3
+Kotlin multiplatform / multi-format serialization	Apache 2.0	1.7.3
+Kotlin reflection library	Apache 2.0	2.1.10
+Kryo5	BSD 3-Clause	5.6.0
+Ktor Client Core	Apache 2.0	3.0.3
+Ktor Client OkHttp	Apache 2.0	3.0.3
+Kubernetes Client Java	Apache 2.0	19.0.0
+Language Tool (JetBrains's fork)	LGPL 2.1	6.5.0.12
+Language Tool (JetBrains's fork, English)	LGPL 2.1	6.5.0.12
+Lets-Plot for Kotlin	MIT	4.9.3
+LevelDB	BSD 3-Clause "New" or "Revised" License (The LevelDB Authors)	1.2.1
+Log4j	Apache 2.0	1.7.36
+Lucene.Net	Apache License 2.0	3.0.3
+MDX for Visual Studio Code	MIT	1.8.7
+MSAL.NET extension for public client broker support	MIT License (Microsoft Corporation)	4.61.3
+MSAL.NET extension for public client broker support.	MIT License (Microsoft Corporation)	0.16.2
+Maven Resolver Provider	Apache 2.0	3.9.9
+MicroCom Runtime Package	MIT License (2021 Nikita Tsukanov)	0.11.0
+Microsoft Authentication Library (MSAL) for Java	MIT	1.13.10
+Microsoft Authentication Library for .NET	MIT License (Microsoft Corporation)	4.61.3
+Microsoft Bcl AsyncInterfaces Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Bcl Memory Package	MIT License (Microsoft Corporation)	9.0.0
+Microsoft CodeAnalysis FlowAnalysis Utilities Package	Apache License 2.0	2.9.5
+Microsoft DiaSymReader Package	MIT License (Microsoft Corporation)	2.0.0
+Microsoft Diagnostics NETCore Client Package	MIT License (Microsoft Corporation)	0.2.510501
+Microsoft Expression Blend SDK	Microsoft Software License Terms (Microsoft Expression Blend SDK for .NET Framework 4.0)	3.0.40218.1
+Microsoft Extensions Configuration Abstractions Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Extensions DependencyInjection Abstractions Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Extensions DependencyInjection Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Extensions DependencyModel Package	MIT License (.NET Foundation and Contributors)	3.0.0
+Microsoft Extensions FileProviders Abstractions Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Extensions FileSystemGlobbing Package	MIT License (Microsoft Corporation)	6.0.0
+Microsoft Extensions Http Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Extensions Logging Abstractions Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Extensions Logging Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Extensions Options Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Extensions Primitives Package	MIT License (Microsoft Corporation)	8.0.0
+Microsoft Identity Client Extensions Msal Package	MIT License (Microsoft Corporation)	4.61.3
+Microsoft IdentityModel Abstractions Package	MIT License (Microsoft Corporation)	6.35.0
+Microsoft IdentityModel JsonWebTokens Package	MIT License (Microsoft Corporation)	6.35.0
+Microsoft IdentityModel Logging Package	MIT License (Microsoft Corporation)	6.35.0
+Microsoft IdentityModel Tokens Package	MIT License (Microsoft Corporation)	6.35.0
+Microsoft Owin FileSystems Package	Apache License 2.0	4.2.2
+Microsoft Owin Host HttpListener Package	Apache License 2.0	4.2.2
+Microsoft Owin Hosting Package	Apache License 2.0	4.2.2
+Microsoft Owin Package	Apache License 2.0	4.2.2
+Microsoft Owin StaticFiles Package	Apache License 2.0	4.2.2
+Microsoft Research Detours Package	MIT License (Microsoft Corporation)	4.0.1
+Microsoft TraceEvent Library	MIT License (Microsoft Corporation)	3.1.17
+Microsoft Web Administration Package	Microsoft Software License Terms (Microsoft .NET Library)	11.1.0
+Microsoft Windows DbgHelp	Microsoft Software License Terms (Microsoft Windows Software Development Kit (SDK) for Windows)	10.1.20240419
+Microsoft Windows SymSrv	Microsoft Software License Terms (Microsoft Windows Software Development Kit (SDK) for Windows)	10.1.20240419
+Microsoft Xml Document Transformation	Microsoft Software License Terms (Microsoft .NET Library)	3.0.0
+Microsoft.AspNetCore.Watch.BrowserRefresh	MIT License (Microsoft Corporation)	1.0.5
+Microsoft.DiaSymReader.Native	Microsoft Software License Terms (Microsoft .NET Library)	1.7.0
+Microsoft.Extensions.DotNetDeltaApplier	MIT License (Microsoft Corporation)	1.0.3
+Microsoft.IO.RecyclableMemoryStream	MIT License (Microsoft Corporation)	2.3.2
+Microsoft.TestPlatform.TranslationLayer	Microsoft Software License Terms (Microsoft .NET Library)	16.0.0.20191015
+Microsoft.Win32.Registry	MIT License (Microsoft Corporation)	5.0.0
+MigLayout	BSD 3-Clause	11.4
+Mono.Cecil	MIT License (2008 - 2015 Jb Evain; 2008 - 2011 Novell, Inc)	0.11.5
+Mono.Debugger.Libs	MIT License (2001-2011 Novell Inc., 2011-2015 Xamarin Inc)	1.0.0
+NVelocity Package	Apache License 2.0	1.0.3
+NanoXML	zlib/libpng	2.2.3
+Native dependencies (arm64) for Microsoft TraceEvent Library	MIT License (Microsoft Corporation)	3.1.17
+Native dependencies (x64) for Microsoft TraceEvent Library	MIT License (Microsoft Corporation)	3.1.17
+Native dependencies (x86) for Microsoft TraceEvent Library	MIT License (Microsoft Corporation)	3.1.17
+Nimbus Content Type	Apache 2.0	1.13.10
+Nimbus JOSE + JWT	Apache 2.0	1.13.10
+Nimbus Language Tags	Apache 2.0	1.13.10
+Nimbus OAuth 2.0 & 2.1 SDK with OpenID Connect extensions	Apache 2.0	1.13.10
+OWIN	Apache License 2.0	1.0
+OkHttp	Apache 2.0	5.0.0-alpha.14
+Plexus Utils	Apache 2.0	3.5.1
+Polly Package	BSD 3-Clause "New" or "Revised" License (2022, App vNext)	7.2.3
+Prettier JSON Schema (prettierrc-schema.json)	Apache 2.0	custom revision
+Protocol Buffers	BSD 3-Clause	3.24.4-jb.2
+Protocol Buffers	BSD 3-Clause "New" or "Revised" License (Google Inc)	3.0.0
+Proxy Vole	Apache 2.0	1.1.6
+Quiche	BSD 2-Clause	90
+Reactor Netty	Apache 2.0	1.1.22
+Redoc	REDOCLY INC. Subscription Agreement	2.39
+Relax NG Object Model	MIT	custom revision
+Rhino JavaScript Engine	MPL 2.0	1.7.15
+Rhino JavaScript Engine (number to string conversion)	MPL 2.0	1.7.14
+Roboto	Apache 2.0	1.100141
+SQLitePCLRaw.core	Apache License 2.0	1.1.2
+SSHJ	Apache 2.0	0.38.0-idea2
+SkiaSharp	MIT License (Microsoft Corporation)	2.88.8.203
+SkiaSharp - Native Assets for Win32	MIT License (Microsoft Corporation)	2.88.8.203
+SkiaSharp.HarfBuzz	MIT License (Microsoft Corporation)	2.88.8.203
+Skiko	Apache 2.0	0.8.18
+Skiko Runtime	Apache 2.0	0.8.18
+SnakeYAML	Apache 2.0	2.3
+SourceCodePro	OFL	2.010
+Sprache.JetBrains	MIT License (Sprache Contributors 2017)	2.3.1
+Squareup Okio	Apache 2.0	3.9.0
+Squareup Wire	Apache 2.0	4.9.6
+StreamEx	Apache 2.0	0.8.2
+Stubs for Microsoft.WindowsDesktop.App	MIT License (JetBrains s.r.o)	0.0.18
+Stylelint JSON Schema (.stylelintrc-schema.json)	Apache 2.0	custom revision
+Swagger UI Dist	Apache 2.0	5.1.3
+System CodeDom Package	MIT License (Microsoft Corporation)	8.0.0
+System Collections Immutable Package	MIT License (Microsoft Corporation)	8.0.0
+System Composition AttributedModel Package	MIT License (Microsoft Corporation)	8.0.0
+System Composition Convention Package	MIT License (Microsoft Corporation)	8.0.0
+System Composition Hosting Package	MIT License (Microsoft Corporation)	8.0.0
+System Composition Runtime Package	MIT License (Microsoft Corporation)	8.0.0
+System Composition TypedParts Package	MIT License (Microsoft Corporation)	8.0.0
+System Configuration ConfigurationManager Package	MIT License (Microsoft Corporation)	8.0.0
+System Diagnostics DiagnosticSource Package	MIT License (Microsoft Corporation)	8.0.1
+System Drawing Common Package	MIT License (Microsoft Corporation)	8.0.0
+System IO Packaging Package	MIT License (Microsoft Corporation)	8.0.1
+System IO Pipelines Package	MIT License (Microsoft Corporation)	8.0.0
+System Reactive Package	MIT License (.NET Foundation and Contributors)	5.0.0
+System Reflection Metadata Package	MIT License (Microsoft Corporation)	8.0.0
+System Runtime CompilerServices Unsafe Package	MIT License (Microsoft Corporation)	6.0.0
+System Security AccessControl Package	MIT License (Microsoft Corporation)	6.0.0
+System Security Cryptography ProtectedData Package	MIT License (Microsoft Corporation)	8.0.0
+System Security Permissions Package	MIT License (Microsoft Corporation)	8.0.0
+System Text Encoding CodePages Package	MIT License (Microsoft Corporation)	8.0.0
+System Text Encodings Web Package	MIT License (Microsoft Corporation)	8.0.0
+System Text Json Package	MIT License (Microsoft Corporation)	8.0.5
+System Threading Channels Package	MIT License (Microsoft Corporation)	8.0.0
+System.Buffers	MIT License (Microsoft Corporation)	4.5.1
+System.ComponentModel.Annotations	MIT License (Microsoft Corporation)	4.5.0
+System.Diagnostics.TraceSource	Microsoft Software License Terms (Microsoft .NET Library)	4.0.0
+System.IO.FileSystem.AccessControl	MIT License (Microsoft Corporation)	5.0.0
+System.IO.FileSystem.Primitives	Microsoft Software License Terms (Microsoft .NET Library)	4.3.0
+System.Linq.Async	MIT License (.NET Foundation and Contributors)	6.0.1
+System.Memory	MIT License (Microsoft Corporation)	4.5.5
+System.Numerics.Vectors	MIT License (Microsoft Corporation)	4.5.0
+System.Reflection.DispatchProxy	MIT License (Microsoft Corporation)	4.4.0
+System.Reflection.TypeExtensions	MIT License (Microsoft Corporation)	4.7.0
+System.Runtime	Microsoft Software License Terms (Microsoft .NET Library)	4.3.1
+System.Runtime.InteropServices.RuntimeInformation	Microsoft Software License Terms (Microsoft .NET Library)	4.3.0
+System.Security.Principal.Windows	MIT License (Microsoft Corporation)	5.0.0
+System.ServiceProcess.ServiceController	Microsoft Software License Terms (Microsoft .NET Library)	4.1.0
+System.Threading.Tasks.Extensions	MIT License (Microsoft Corporation)	4.5.4
+System.ValueTuple	MIT License (Microsoft Corporation)	4.5.0
+TLS Channel	MIT	0.8.0
+TSLint JSON Schema (tslint-schema.json)	Apache 2.0	custom revision
+TagSoup	Apache 2.0	1.2.1
+Tailwind CSS Language Server	MIT	0.0.4
+TeamCity Service Messages read/write access	Apache License 2.0	3.0.20210120.1
+The Erlang LS extension for VSCode	Apache 2.0	0.0.43
+Trang	BSD 3-Clause	custom revision
+Trove4j (JetBrains's fork)	LGPL 2.1	1.0.20221201
+TypeScript	Apache 2.0	1.6.2
+UTF-8/16/32 C++ library	MIT License (Mikhail Pilin)	2.2.2
+Unidecode	MIT	0.0.7
+VS Code Twig Language 2	MIT	0.9.4
+Velocity	Apache 2.0	2.3
+Vestris Resource Lib	MIT License (2008-2016 Daniel Doubrovkine, Vestris Inc)	1.4.20210120.2
+Vim Script language support for Atom	MIT	1.2.1
+Visual Studio Code	MIT	1.90.0
+Volar Language Server	MIT	2.x
+Volar Language Server	MIT	1.11.1
+Vue Language Server	MIT	2.x
+Vue Language Server	MIT	1.8.27
+W3C CSS Validation Service	W3C	2.2.6
+WPF Contrib	Apache License 2.0	2.0.20170610
+WiX: Windows Installer XML Toolset	Microsoft Reciprocal License	3.11.0
+Windows 7 API Code Pack — Core + Shell, without PDBs	Microsoft Software License Terms (Microsoft Windows API Code Pack for Microsoft .NET Framework)	1.1.20210120.1
+XMLBeans	Apache 2.0	5.1.1
+XStream	BSD 3-Clause	1.4.20
+XZ for Java	Public Domain (CC0)	1.10
+Xerces	Apache 2.0	2.12.2
+Xerial SQLite JDBC	Apache 2.0	3.42.0-jb.1
+Xerial SQLite JDBC	Apache 2.0	3.48.0.0
+XmlRPC	Apache 2.0	2.0.1
+YamlDotNet Signed Package	MIT License (2008, 2009, 2010, 2011, 2012, 2013, 2014 Antoine Aubry and contributors)	5.2.1
+aalto-xml	Apache 2.0	1.3.3
+ap-validation	Apache 2.0	76
+apache.commons.math4.core	Apache 2.0	4.0-beta1
+apache.logging.log4j.to.slf4j	Apache 2.0	2.20.0
+batik	Apache 2.0	1.16.0-35
+blockmap	Apache 2.0	1.0.7
+bouncy-castle-pgp	MIT	1.80
+bouncy-castle-provider	MIT	1.80
+brotli	MIT	0.1.2
+caffeine	Apache 2.0	3.2.0
+classgraph	codehaus	4.8.179
+com.opencsv:opencsv:5.1	Apache 2.0	5.8
+dbus-java	LGPL 2.0	4.2.1
+docker-java-api	Apache 2.0	3.3.0
+docker-java-core	Apache 2.0	3.3.3
+docker-java-transport	Apache 2.0	3.3.3
+docker-java-transport-httpclient5	Apache 2.0	3.3.3
+emoji-java	MIT	5.1.1
+entities	BSD 2-Clause	custom revision
+eslint	MIT	3.17
+fastutil	Apache 2.0	8.5.14-jb1
+fsevents	MIT	2.3.2
+gRPC Kotlin: Stub	Apache 2.0	1.4.1
+gRPC: Core	Apache 2.0	1.66.0
+gRPC: Netty Shaded	Apache 2.0	1.66.0
+gRPC: Protobuf	Apache 2.0	1.66.0
+gRPC: Stub	Apache 2.0	1.66.0
+github.oshi.core	MIT	6.6.0
+googlecode.plist.dd	MIT	1.28
+grpc-services	Apache 2.0	1.44.0
+hash4j	Apache 2.0	0.20.0
+hppc	Apache 2.0	0.9.1
+htmlparser2	MIT	custom revision
+imgscalr	Apache 2.0	4.2
+indriya	BSD 3-Clause	1.3
+ini4j (JetBrains's fork)	Apache 2.0	0.5.5-2
+intellij-markdown	Apache 2.0	0.7.2
+jackson-jr-objects	Apache 2.0	2.17.2
+jediterm-core	LGPL 3.0	3.50
+jediterm-ui	LGPL 3.0	3.50
+jnaerator-runtime	LGPL 3.0	0.12
+jsch-agent-proxy	BSD 3-Clause	0.0.9
+jsch-agent-proxy-sshj	BSD 3-Clause	0.0.9
+jsoup	MIT	1.18.3
+jsvg	MIT	1.3.0-jb.8
+jts-io-common	EPL 2.0	1.19.0
+jzlib	BSD 3-Clause	1.1.3
+kotlin-codepoints	MIT	0.9.0
+kotlinx-coroutines-reactor	Apache 2.0	1.8.1
+kotlinx-datetime-jvm	Apache 2.0	0.6.2
+kotlinx.html	Apache 2.0	0.12.0
+ktor-client-auth	Apache 2.0	3.0.3
+ktor-client-cio-internal	Apache 2.0	3.0.3
+ktor-client-content-negotiation	Apache 2.0	3.0.3
+ktor-client-encoding	Apache 2.0	3.0.3
+ktor-client-java	Apache 2.0	3.0.3
+ktor-serialization-kotlinx-json	Apache 2.0	3.0.3
+ktor.io TLS	Apache 2.0	3.0.3
+libunwind	MIT License (2002 Hewlett-Packard Corporation)	1.4.0
+llama.cpp	MIT	git snapshot
+lz4-java	Apache 2.0	1.8.0
+mercurial_prompthooks	GPLv2 (used as hg extension called from hg executable)	custom revision
+microba	BSD 3-Clause	custom revision
+morfologik-fsa	BSD 3-Clause	2.1.9
+morfologik-fsa-builders	BSD 3-Clause	2.1.9
+morfologik-speller	BSD 3-Clause	2.1.9
+morfologik-stemming	BSD 3-Clause	2.1.9
+mvstore	EPL 1.0	2.3.232
+net.loomchild.segment	MIT	2.0.3
+netty-buffer	Apache 2.0	4.2.0.RC2
+netty-codec-compression	Apache 2.0	4.2.0.RC2
+netty-codec-http	Apache 2.0	4.2.0.RC2
+netty-handler-proxy	Apache 2.0	4.2.0.RC2
+ngram-slp	MIT	0.0.3
+opentelemetry	Apache 2.0	1.47.0
+opentelemetry-exporter-otlp-common	Apache 2.0	1.47.0
+opentelemetry-extension-kotlin	Apache 2.0	1.47.0
+opentelemetry-semconv	Apache 2.0	1.30.0-rc.1
+org.eclipse.lsp4j.debug:0.14.0	EPL 2.0	0.21.0
+org.eclipse.lsp4j.jsonrpc.debug:0.14.0	EPL 2.0	0.21.0
+org.eclipse.lsp4j.jsonrpc:0.14.0	EPL 2.0	0.21.1
+org.eclipse.lsp4j:0.14.0	EPL 2.0	0.21.1
+org.eclipse.xtext.xbase	EPL 2.0	2.35.0
+package.json JSON Schema (packageJsonSchema.json)	Apache 2.0	custom revision
+plist-cil Package	MIT License (2015-2020 Natalia Portillo)	2.2.0
+proj4j	Apache 2.0	1.3.0
+proj4j-epsg	Apache 2.0	1.3.0
+protobuf-java-util	BSD 3-Clause	3.24.4-jb.2
+protobuf-kotlin	BSD 3-Clause	3.25.5
+pty4j	EPL 1.0	0.13.1
+rd Swing integration	Apache 2.0	2025.1.1
+rd core	Apache 2.0	2025.1.1
+rd framework	Apache 2.0	2025.1.1
+rd generator	Apache 2.0	2025.1.1
+rd text buffers	Apache 2.0	2025.1.1
+semver	ISC	6.3.0
+semver4j	MIT	3.1.0
+slf4j-api	MIT	2.0.13
+slf4j-jdk14	MIT	2.0.13
+snakeyaml-engine	Apache 2.0	2.9
+swingx	LGPL 2.1	1.6.2-2
+tsconfig JSON Schema (tsconfig-schema.json)	Apache 2.0	custom revision
+tsx	MIT	4.15.6
+unit-api	BSD 3-Clause	1.0
+uom-lib-common	BSD 3-Clause	1.1
+webpack 2.x-3.x JSON Schema (webpack-schema.json)	MIT	2.x-3.x
+webpack 4.x (webpack-schema4.json) and plugins (webpackPlugins/**) JSON Schemas	MIT	4.x
+webstorm-styled-components	MIT	custom revision
+winp	MIT	1.30.1
+xUnit.net	Apache License 2.0	1.9.2
+xUnit.net [Abstractions]	Apache License 2.0	2.0.3
+xUnit.net [Runner Utility]	Apache License 2.0	2.4.1
+xml-apis-ext	Apache 2.0	1.3.04
+xml-resolver	Apache 2.0	1.2
+yFiles	Commercial, available on request	2.13
+zip-signer	Apache 2.0	0.1.24
+zstd-jni	BSD 2-Clause	1.5.6-9
